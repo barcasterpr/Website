@@ -24,6 +24,19 @@
       min-height: 100vh;
       text-align: center;
       padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background Video */
+    #background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
 
     .container {
@@ -38,7 +51,11 @@
       max-width: 180px;
       width: 100%;
       height: auto;
-      margin-bottom: 40px; /* increased space below logo */
+      margin-bottom: 40px;
+    }
+
+    h1, h2, p, .contact a {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     }
 
     h1 {
@@ -98,6 +115,13 @@
   </style>
 </head>
 <body>
+  <!-- Background video -->
+  <video autoplay muted loop id="background-video" playsinline>
+    <source src="stockvideo.mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+  </video>
+
+  <!-- Content -->
   <div class="container">
     <img src="Logo.png" alt="Barcaster PR Logo" />
     <h1>Barcaster PR</h1>
